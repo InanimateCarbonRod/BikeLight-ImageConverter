@@ -1,0 +1,18 @@
+This Python 2.7 script is used to convert a 24 bit-per-pixel bitmap image to a .c and .h file for linking with the BikeLight firmware during compilation. This will be loaded into the flash memory of the Atmel chip for display on the BikeLight board.
+
+The bitmap file must be exactly 10 pixels tall, but the width can be anywhere from 1 to maybe 200 pixels.
+
+Requirements:
+    Python 2.7 must be installed.
+    Bitmap image must be 24 bpp.
+    Bitmap image must be 10 pixels tall.
+    
+Usage:
+    py BmpConverter.py image_name.bmp
+
+Output:
+    image.c: a C source code file containing the image data.
+    image.h: a C header file containing information about the image.
+    
+    These files are included in the Arduino source project that is loaded onto the BikeLight (Arduino-compatible) board.
+    
